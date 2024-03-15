@@ -1,5 +1,6 @@
 using System.Text;
 using System.Net.Http.Headers;
+using System.Diagnostics;
 
 [System.Serializable]
 public class TTSPayload
@@ -12,12 +13,19 @@ public class TTSPayload
 }
 
 public class OpenAIWrapper
-{ 
-    private string openAIKey = "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";
+{
+    private string openAIKey;
     private TTSModel model = TTSModel.TTS_1;
     private TTSVoice voice = TTSVoice.Alloy;
     private float speed = 1f;
     private readonly string outputFormat = "mp3";
+
+    public OpenAIWrapper()
+    {
+        if (Environment.GetEnvironmentVariable("OpenAIKey") != null)
+            openAIKey = Environment.GetEnvironmentVariable("OpenAIKey");
+        else throw new Exception("The OpenAI API key was not found in the environment variables. [Variable name = OpenAIKey]");
+    }
 
     public async Task<byte[]> RequestTextToSpeech(string text)
     {
@@ -46,8 +54,7 @@ public class OpenAIWrapper
         {
             return response;
         }
-        Console.WriteLine("Error: " + httpResponse.ReasonPhrase);
-        return null;
+        throw new Exception("Error: " + httpResponse.ReasonPhrase);
     }
     
     public async Task<byte[]> RequestTextToSpeech(string text, TTSModel model, TTSVoice voice, float speed)
