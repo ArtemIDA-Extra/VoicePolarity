@@ -1,6 +1,9 @@
 
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
+using NAudio;
+using NAudio.Wave;
+using NAudio.Dmo;
 
 namespace VoicePolarity
 {
@@ -30,6 +33,9 @@ namespace VoicePolarity
             //OpenAI_BW.DoWork += OpenAI_BW_DoWork;
             //OpenAI_BW.RunWorkerCompleted += OpenAI_BW_RunWorkerCompleted;
 
+
+            ShowHistorySection(false);
+            ShowTTSSection(false);
             InitTTSComboBoxes();
         }
 
@@ -70,7 +76,8 @@ namespace VoicePolarity
                         ActiveUser = foundedUser;
                         UpdateHistory();
                         MessageBox.Show("Login successful!");
-                        EnableTTSSection(true);
+                        ShowHistorySection(true);
+                        ShowTTSSection(true);
                     }
                     else MessageBox.Show("The login or password is incorrect. Try again.");
                 }
@@ -109,22 +116,27 @@ namespace VoicePolarity
 
         private void History_DG_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (History_DG[e.ColumnIndex, e.RowIndex] is DataGridViewButtonCell)
+            if (History_DG[e.ColumnIndex, e.RowIndex] is DataGridViewButtonCell && e.ColumnIndex == 3)
                 Clipboard.SetText(History_DG.Rows[e.RowIndex].Cells[1].Value.ToString());
+            if (History_DG[e.ColumnIndex, e.RowIndex] is DataGridViewButtonCell && e.ColumnIndex == 2)
+                PlayMP3(History_DG.Rows[e.RowIndex].Cells[1].Value.ToString());
         }
 
-
-        private void EnableTTSSection(bool enable)
+        private void ShowHistorySection(bool enable)
         {
-            TTSModel_Label.Enabled = enable;
-            TTSModel_CB.Enabled = enable;
-            TTSVoice_Label.Enabled = enable;
-            TTSVoice_CB.Enabled = enable;
-            TTSSpeed_Label.Enabled = enable;
-            TTSSpeed_CB.Enabled = enable;
-            TTS_Label.Enabled = enable;
-            TTS_TB.Enabled = enable;
-            TTSAccept_Button.Enabled = enable;
+            groupBox2.Visible = enable;
+        }
+        private void ShowTTSSection(bool enable)
+        {
+            TTSModel_Label.Visible = enable;
+            TTSModel_CB.Visible = enable;
+            TTSVoice_Label.Visible = enable;
+            TTSVoice_CB.Visible = enable;
+            TTSSpeed_Label.Visible = enable;
+            TTSSpeed_CB.Visible = enable;
+            TTS_Label.Visible = enable;
+            TTS_TB.Visible = enable;
+            TTSAccept_Button.Visible = enable;
         }
 
         void Test()
@@ -177,6 +189,19 @@ namespace VoicePolarity
         {
             UpdateHistory();
             MessageBox.Show("Sample generation completed.");
+        }
+
+        private static void PlayMP3(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                MediaFoundationReader reader = new MediaFoundationReader(filePath);
+                var waveOut = new WaveOut();
+                waveOut.Init(reader);
+                waveOut.Play();
+            }
+            else
+                throw new Exception($"File on path [{filePath}] not found!");
         }
     }
 
