@@ -23,6 +23,12 @@ namespace VoicePolarity
             //Test();
             InitializeComponent();
 
+            //Login_Button.Click += Login_Button_Click;
+            //History_DG.CellContentClick += History_DG_CellContentClick;
+            //TTSAccept_Button.Click += TTSAccept_Button_Click;
+            //OpenAI_BW.DoWork += OpenAI_BW_DoWork;
+            //OpenAI_BW.RunWorkerCompleted += OpenAI_BW_RunWorkerCompleted;
+
             InitTTSComboBoxes();
         }
 

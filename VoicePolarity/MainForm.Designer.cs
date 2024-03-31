@@ -28,277 +28,281 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Login_TB = new TextBox();
-            Password_TB = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            Login_Button = new Button();
-            TTS_TB = new RichTextBox();
-            TTS_Label = new Label();
-            OpenAI_BW = new System.ComponentModel.BackgroundWorker();
-            TTSAccept_Button = new Button();
-            TTSModel_CB = new ComboBox();
-            TTSVoice_CB = new ComboBox();
-            TTSModel_Label = new Label();
-            TTSVoice_Label = new Label();
-            TTSSpeed_CB = new ComboBox();
-            TTSSpeed_Label = new Label();
-            groupBox1 = new GroupBox();
-            History_DG = new DataGridView();
-            groupBox2 = new GroupBox();
-            History_Empty_Label = new Label();
-            ID = new DataGridViewTextBoxColumn();
-            FileLocation = new DataGridViewTextBoxColumn();
-            CopyPath = new DataGridViewButtonColumn();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)History_DG).BeginInit();
-            groupBox2.SuspendLayout();
-            SuspendLayout();
+            this.Login_TB = new System.Windows.Forms.TextBox();
+            this.Password_TB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Login_Button = new System.Windows.Forms.Button();
+            this.TTS_TB = new System.Windows.Forms.RichTextBox();
+            this.TTS_Label = new System.Windows.Forms.Label();
+            this.OpenAI_BW = new System.ComponentModel.BackgroundWorker();
+            this.TTSAccept_Button = new System.Windows.Forms.Button();
+            this.TTSModel_CB = new System.Windows.Forms.ComboBox();
+            this.TTSVoice_CB = new System.Windows.Forms.ComboBox();
+            this.TTSModel_Label = new System.Windows.Forms.Label();
+            this.TTSVoice_Label = new System.Windows.Forms.Label();
+            this.TTSSpeed_CB = new System.Windows.Forms.ComboBox();
+            this.TTSSpeed_Label = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.History_DG = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.History_Empty_Label = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FileLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CopyPath = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.History_DG)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.SuspendLayout();
             // 
             // Login_TB
             // 
-            Login_TB.Location = new Point(85, 22);
-            Login_TB.Name = "Login_TB";
-            Login_TB.Size = new Size(100, 23);
-            Login_TB.TabIndex = 0;
+            this.Login_TB.Location = new System.Drawing.Point(85, 22);
+            this.Login_TB.Name = "Login_TB";
+            this.Login_TB.Size = new System.Drawing.Size(100, 23);
+            this.Login_TB.TabIndex = 0;
             // 
             // Password_TB
             // 
-            Password_TB.Location = new Point(85, 54);
-            Password_TB.Name = "Password_TB";
-            Password_TB.PasswordChar = '*';
-            Password_TB.Size = new Size(100, 23);
-            Password_TB.TabIndex = 1;
+            this.Password_TB.Location = new System.Drawing.Point(85, 54);
+            this.Password_TB.Name = "Password_TB";
+            this.Password_TB.PasswordChar = '*';
+            this.Password_TB.Size = new System.Drawing.Size(100, 23);
+            this.Password_TB.TabIndex = 1;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(42, 25);
-            label1.Name = "label1";
-            label1.Size = new Size(37, 15);
-            label1.TabIndex = 2;
-            label1.Text = "Login";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(42, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Login";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(22, 54);
-            label2.Name = "label2";
-            label2.Size = new Size(57, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Password";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 15);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Password";
             // 
             // Login_Button
             // 
-            Login_Button.Location = new Point(68, 83);
-            Login_Button.Name = "Login_Button";
-            Login_Button.Size = new Size(75, 23);
-            Login_Button.TabIndex = 4;
-            Login_Button.Text = "Sign In";
-            Login_Button.UseVisualStyleBackColor = true;
-            Login_Button.Click += Login_Button_Click;
+            this.Login_Button.Location = new System.Drawing.Point(68, 83);
+            this.Login_Button.Name = "Login_Button";
+            this.Login_Button.Size = new System.Drawing.Size(75, 23);
+            this.Login_Button.TabIndex = 4;
+            this.Login_Button.Text = "Sign In";
+            this.Login_Button.UseVisualStyleBackColor = true;
+            this.Login_Button.Click += new System.EventHandler(this.Login_Button_Click);
             // 
             // TTS_TB
             // 
-            TTS_TB.Enabled = false;
-            TTS_TB.Location = new Point(9, 166);
-            TTS_TB.MaxLength = 4096;
-            TTS_TB.Name = "TTS_TB";
-            TTS_TB.Size = new Size(572, 236);
-            TTS_TB.TabIndex = 5;
-            TTS_TB.Text = "";
+            this.TTS_TB.Enabled = false;
+            this.TTS_TB.Location = new System.Drawing.Point(9, 166);
+            this.TTS_TB.MaxLength = 4096;
+            this.TTS_TB.Name = "TTS_TB";
+            this.TTS_TB.Size = new System.Drawing.Size(572, 236);
+            this.TTS_TB.TabIndex = 5;
+            this.TTS_TB.Text = "";
             // 
             // TTS_Label
             // 
-            TTS_Label.AutoSize = true;
-            TTS_Label.Enabled = false;
-            TTS_Label.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            TTS_Label.Location = new Point(222, 138);
-            TTS_Label.Name = "TTS_Label";
-            TTS_Label.Size = new Size(143, 25);
-            TTS_Label.TabIndex = 6;
-            TTS_Label.Text = "Text To Speech";
+            this.TTS_Label.AutoSize = true;
+            this.TTS_Label.Enabled = false;
+            this.TTS_Label.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TTS_Label.Location = new System.Drawing.Point(222, 138);
+            this.TTS_Label.Name = "TTS_Label";
+            this.TTS_Label.Size = new System.Drawing.Size(143, 25);
+            this.TTS_Label.TabIndex = 6;
+            this.TTS_Label.Text = "Text To Speech";
             // 
             // OpenAI_BW
             // 
-            OpenAI_BW.DoWork += OpenAI_BW_DoWork;
-            OpenAI_BW.RunWorkerCompleted += OpenAI_BW_RunWorkerCompleted;
+            this.OpenAI_BW.DoWork += new System.ComponentModel.DoWorkEventHandler(this.OpenAI_BW_DoWork);
+            this.OpenAI_BW.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.OpenAI_BW_RunWorkerCompleted);
             // 
             // TTSAccept_Button
             // 
-            TTSAccept_Button.Enabled = false;
-            TTSAccept_Button.Location = new Point(258, 408);
-            TTSAccept_Button.Name = "TTSAccept_Button";
-            TTSAccept_Button.Size = new Size(75, 23);
-            TTSAccept_Button.TabIndex = 7;
-            TTSAccept_Button.Text = "Voice it!";
-            TTSAccept_Button.UseVisualStyleBackColor = true;
-            TTSAccept_Button.Click += TTSAccept_Button_Click;
+            this.TTSAccept_Button.Enabled = false;
+            this.TTSAccept_Button.Location = new System.Drawing.Point(258, 408);
+            this.TTSAccept_Button.Name = "TTSAccept_Button";
+            this.TTSAccept_Button.Size = new System.Drawing.Size(75, 23);
+            this.TTSAccept_Button.TabIndex = 7;
+            this.TTSAccept_Button.Text = "Voice it!";
+            this.TTSAccept_Button.UseVisualStyleBackColor = true;
+            this.TTSAccept_Button.Click += new System.EventHandler(this.TTSAccept_Button_Click);
             // 
             // TTSModel_CB
             // 
-            TTSModel_CB.Enabled = false;
-            TTSModel_CB.FormattingEnabled = true;
-            TTSModel_CB.Location = new Point(599, 190);
-            TTSModel_CB.Name = "TTSModel_CB";
-            TTSModel_CB.Size = new Size(121, 23);
-            TTSModel_CB.TabIndex = 8;
+            this.TTSModel_CB.Enabled = false;
+            this.TTSModel_CB.FormattingEnabled = true;
+            this.TTSModel_CB.Location = new System.Drawing.Point(599, 190);
+            this.TTSModel_CB.Name = "TTSModel_CB";
+            this.TTSModel_CB.Size = new System.Drawing.Size(121, 23);
+            this.TTSModel_CB.TabIndex = 8;
             // 
             // TTSVoice_CB
             // 
-            TTSVoice_CB.Enabled = false;
-            TTSVoice_CB.FormattingEnabled = true;
-            TTSVoice_CB.Location = new Point(599, 248);
-            TTSVoice_CB.Name = "TTSVoice_CB";
-            TTSVoice_CB.Size = new Size(121, 23);
-            TTSVoice_CB.TabIndex = 9;
+            this.TTSVoice_CB.Enabled = false;
+            this.TTSVoice_CB.FormattingEnabled = true;
+            this.TTSVoice_CB.Location = new System.Drawing.Point(599, 248);
+            this.TTSVoice_CB.Name = "TTSVoice_CB";
+            this.TTSVoice_CB.Size = new System.Drawing.Size(121, 23);
+            this.TTSVoice_CB.TabIndex = 9;
             // 
             // TTSModel_Label
             // 
-            TTSModel_Label.AutoSize = true;
-            TTSModel_Label.Enabled = false;
-            TTSModel_Label.Location = new Point(637, 172);
-            TTSModel_Label.Name = "TTSModel_Label";
-            TTSModel_Label.Size = new Size(41, 15);
-            TTSModel_Label.TabIndex = 11;
-            TTSModel_Label.Text = "Model";
+            this.TTSModel_Label.AutoSize = true;
+            this.TTSModel_Label.Enabled = false;
+            this.TTSModel_Label.Location = new System.Drawing.Point(637, 172);
+            this.TTSModel_Label.Name = "TTSModel_Label";
+            this.TTSModel_Label.Size = new System.Drawing.Size(41, 15);
+            this.TTSModel_Label.TabIndex = 11;
+            this.TTSModel_Label.Text = "Model";
             // 
             // TTSVoice_Label
             // 
-            TTSVoice_Label.AutoSize = true;
-            TTSVoice_Label.Enabled = false;
-            TTSVoice_Label.Location = new Point(643, 230);
-            TTSVoice_Label.Name = "TTSVoice_Label";
-            TTSVoice_Label.Size = new Size(35, 15);
-            TTSVoice_Label.TabIndex = 12;
-            TTSVoice_Label.Text = "Voice";
+            this.TTSVoice_Label.AutoSize = true;
+            this.TTSVoice_Label.Enabled = false;
+            this.TTSVoice_Label.Location = new System.Drawing.Point(643, 230);
+            this.TTSVoice_Label.Name = "TTSVoice_Label";
+            this.TTSVoice_Label.Size = new System.Drawing.Size(35, 15);
+            this.TTSVoice_Label.TabIndex = 12;
+            this.TTSVoice_Label.Text = "Voice";
             // 
             // TTSSpeed_CB
             // 
-            TTSSpeed_CB.Enabled = false;
-            TTSSpeed_CB.FormattingEnabled = true;
-            TTSSpeed_CB.Location = new Point(599, 308);
-            TTSSpeed_CB.Name = "TTSSpeed_CB";
-            TTSSpeed_CB.Size = new Size(121, 23);
-            TTSSpeed_CB.TabIndex = 13;
+            this.TTSSpeed_CB.Enabled = false;
+            this.TTSSpeed_CB.FormattingEnabled = true;
+            this.TTSSpeed_CB.Location = new System.Drawing.Point(599, 308);
+            this.TTSSpeed_CB.Name = "TTSSpeed_CB";
+            this.TTSSpeed_CB.Size = new System.Drawing.Size(121, 23);
+            this.TTSSpeed_CB.TabIndex = 13;
             // 
             // TTSSpeed_Label
             // 
-            TTSSpeed_Label.AutoSize = true;
-            TTSSpeed_Label.Enabled = false;
-            TTSSpeed_Label.Location = new Point(639, 290);
-            TTSSpeed_Label.Name = "TTSSpeed_Label";
-            TTSSpeed_Label.Size = new Size(39, 15);
-            TTSSpeed_Label.TabIndex = 14;
-            TTSSpeed_Label.Text = "Speed";
+            this.TTSSpeed_Label.AutoSize = true;
+            this.TTSSpeed_Label.Enabled = false;
+            this.TTSSpeed_Label.Location = new System.Drawing.Point(639, 290);
+            this.TTSSpeed_Label.Name = "TTSSpeed_Label";
+            this.TTSSpeed_Label.Size = new System.Drawing.Size(39, 15);
+            this.TTSSpeed_Label.TabIndex = 14;
+            this.TTSSpeed_Label.Text = "Speed";
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(Password_TB);
-            groupBox1.Controls.Add(Login_TB);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(Login_Button);
-            groupBox1.Location = new Point(12, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(201, 123);
-            groupBox1.TabIndex = 15;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "User";
+            this.groupBox1.Controls.Add(this.Password_TB);
+            this.groupBox1.Controls.Add(this.Login_TB);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.Login_Button);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(201, 123);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "User";
             // 
             // History_DG
             // 
-            History_DG.AllowUserToAddRows = false;
-            History_DG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            History_DG.Columns.AddRange(new DataGridViewColumn[] { ID, FileLocation, CopyPath });
-            History_DG.Location = new Point(6, 22);
-            History_DG.Name = "History_DG";
-            History_DG.ReadOnly = true;
-            History_DG.RowHeadersVisible = false;
-            History_DG.RowTemplate.Height = 25;
-            History_DG.Size = new Size(476, 95);
-            History_DG.TabIndex = 16;
-            History_DG.Visible = false;
-            History_DG.CellContentClick += History_DG_CellContentClick;
+            this.History_DG.AllowUserToAddRows = false;
+            this.History_DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.History_DG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.FileLocation,
+            this.CopyPath});
+            this.History_DG.Location = new System.Drawing.Point(6, 22);
+            this.History_DG.Name = "History_DG";
+            this.History_DG.ReadOnly = true;
+            this.History_DG.RowHeadersVisible = false;
+            this.History_DG.RowTemplate.Height = 25;
+            this.History_DG.Size = new System.Drawing.Size(476, 95);
+            this.History_DG.TabIndex = 16;
+            this.History_DG.Visible = false;
+            this.History_DG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.History_DG_CellContentClick);
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(History_Empty_Label);
-            groupBox2.Controls.Add(History_DG);
-            groupBox2.Location = new Point(232, 12);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(488, 123);
-            groupBox2.TabIndex = 17;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "History";
+            this.groupBox2.Controls.Add(this.History_Empty_Label);
+            this.groupBox2.Controls.Add(this.History_DG);
+            this.groupBox2.Location = new System.Drawing.Point(232, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(488, 123);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "History";
             // 
             // History_Empty_Label
             // 
-            History_Empty_Label.AutoSize = true;
-            History_Empty_Label.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            History_Empty_Label.Location = new Point(167, 63);
-            History_Empty_Label.Name = "History_Empty_Label";
-            History_Empty_Label.Size = new Size(156, 25);
-            History_Empty_Label.TabIndex = 17;
-            History_Empty_Label.Text = "History is Empty";
-            History_Empty_Label.Visible = false;
+            this.History_Empty_Label.AutoSize = true;
+            this.History_Empty_Label.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.History_Empty_Label.Location = new System.Drawing.Point(167, 63);
+            this.History_Empty_Label.Name = "History_Empty_Label";
+            this.History_Empty_Label.Size = new System.Drawing.Size(156, 25);
+            this.History_Empty_Label.TabIndex = 17;
+            this.History_Empty_Label.Text = "History is Empty";
+            this.History_Empty_Label.Visible = false;
             // 
             // ID
             // 
-            ID.FillWeight = 50F;
-            ID.HeaderText = "ID";
-            ID.MinimumWidth = 25;
-            ID.Name = "ID";
-            ID.ReadOnly = true;
-            ID.Width = 50;
+            this.ID.FillWeight = 50F;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 25;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
             // 
             // FileLocation
             // 
-            FileLocation.FillWeight = 375F;
-            FileLocation.HeaderText = "FileLocation";
-            FileLocation.MinimumWidth = 375;
-            FileLocation.Name = "FileLocation";
-            FileLocation.ReadOnly = true;
-            FileLocation.Width = 375;
+            this.FileLocation.FillWeight = 375F;
+            this.FileLocation.HeaderText = "FileLocation";
+            this.FileLocation.MinimumWidth = 100;
+            this.FileLocation.Name = "FileLocation";
+            this.FileLocation.ReadOnly = true;
+            this.FileLocation.Width = 375;
             // 
             // CopyPath
             // 
-            CopyPath.FillWeight = 45F;
-            CopyPath.HeaderText = "Copy";
-            CopyPath.MinimumWidth = 45;
-            CopyPath.Name = "CopyPath";
-            CopyPath.ReadOnly = true;
-            CopyPath.Resizable = DataGridViewTriState.True;
-            CopyPath.SortMode = DataGridViewColumnSortMode.Automatic;
-            CopyPath.Text = "Copy";
-            CopyPath.UseColumnTextForButtonValue = true;
-            CopyPath.Width = 45;
+            this.CopyPath.FillWeight = 45F;
+            this.CopyPath.HeaderText = "Copy";
+            this.CopyPath.MinimumWidth = 45;
+            this.CopyPath.Name = "CopyPath";
+            this.CopyPath.ReadOnly = true;
+            this.CopyPath.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CopyPath.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.CopyPath.Text = "Copy";
+            this.CopyPath.UseColumnTextForButtonValue = true;
+            this.CopyPath.Width = 45;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(730, 450);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            Controls.Add(TTSSpeed_Label);
-            Controls.Add(TTSSpeed_CB);
-            Controls.Add(TTSVoice_Label);
-            Controls.Add(TTSModel_Label);
-            Controls.Add(TTSVoice_CB);
-            Controls.Add(TTSModel_CB);
-            Controls.Add(TTSAccept_Button);
-            Controls.Add(TTS_Label);
-            Controls.Add(TTS_TB);
-            Name = "MainForm";
-            Text = "Form1";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)History_DG).EndInit();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(730, 450);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.TTSSpeed_Label);
+            this.Controls.Add(this.TTSSpeed_CB);
+            this.Controls.Add(this.TTSVoice_Label);
+            this.Controls.Add(this.TTSModel_Label);
+            this.Controls.Add(this.TTSVoice_CB);
+            this.Controls.Add(this.TTSModel_CB);
+            this.Controls.Add(this.TTSAccept_Button);
+            this.Controls.Add(this.TTS_Label);
+            this.Controls.Add(this.TTS_TB);
+            this.Name = "MainForm";
+            this.Text = "Form1";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.History_DG)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
