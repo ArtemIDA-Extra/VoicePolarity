@@ -13,4 +13,3 @@ RUN dotnet restore
 COPY aspnetapp/. ./aspnetapp/
 WORKDIR /source/aspnetapp
 RUN dotnet publish -c release -o /app --no-restore
-ENTRYPOINT ["dotnet", "FitiChan.Bot.dll"]
