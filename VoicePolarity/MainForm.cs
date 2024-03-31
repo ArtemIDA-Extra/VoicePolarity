@@ -20,6 +20,7 @@ namespace VoicePolarity
         public MainForm(VoicePolarityDBContext db)
         {
             dbContext = db;
+
             //Test();
             InitializeComponent();
 
